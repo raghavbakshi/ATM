@@ -33,7 +33,7 @@ def get_acc_bal(ID):
 get_acc_bal(1)
 
 
-# Withraw the amount
+# Withraw the amount and appending the record in transactions db
 def withraw(ID,bank_acc_id,input_amount):
     mydb = connection.connect(host="localhost", user="root", passwd="password", use_pure=True)
     cursor = mydb.cursor()
@@ -57,7 +57,7 @@ def withraw(ID,bank_acc_id,input_amount):
 
 withraw(2,14,500)
 
-# Account Statement
+# Account Statement 
 
 def statement(start,end,id):
     mydb = connection.connect(host="localhost", user="root", passwd="password", use_pure=True)
